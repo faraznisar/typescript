@@ -35,3 +35,21 @@ const json = '{"x": 10, "y":20}';
 
 const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates);
+
+//2)initializing on one line and declaring on another.
+let words = ["hello", "blue"];
+let foundWord: boolean;
+
+for (let index = 0; index < words.length; index++) {
+  if (words[index] === "green") {
+    foundWord = true;
+  }
+}
+
+//3) variable whose type cannot be intefered correctly
+
+let myNumbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+for (let index = 0; index < myNumbers.length; index++) {
+  numberAboveZero = myNumbers[index];
+}
